@@ -9,14 +9,19 @@ from buttons import user_menu, admin_menu
 from database import create_table, insert_user
 from admin import dp as admin_router
 from users import dp as user_router
+from aiogram.client.session.aiohttp import AiohttpSession
 
 from aiogram.types import ReplyKeyboardRemove
 
 TOKEN = "7833766047:AAEyx3YaT3urp6UKM-LJMT4VTMsaxqS_4IY"
 
+PROXY_URL = 'http://proxy.server:3128'
+session = AiohttpSession(proxy=PROXY_URL)
+
 logging.basicConfig(level=logging.INFO)
 
-bot = Bot(token=TOKEN)
+# bot = Bot(token=TOKEN)
+bot = Bot(token=TOKEN, session=session)
 dp = Dispatcher()
 
 ADMINS = [1038185913, ]
