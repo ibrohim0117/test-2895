@@ -12,7 +12,7 @@ from users import dp as user_router
 
 from aiogram.types import ReplyKeyboardRemove
 
-TOKEN = "7833766047:AAFJhD6CnZ2-3kYsWG9frHtzYk2rnESRJio"
+TOKEN = "7833766047:AAEyx3YaT3urp6UKM-LJMT4VTMsaxqS_4IY"
 
 logging.basicConfig(level=logging.INFO)
 
